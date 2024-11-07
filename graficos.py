@@ -29,7 +29,7 @@ plt.show()
 # segundos = [0.0001, 0.0002, 0.0003, 0.0004, 0.0005, 0.0007, 0.0010]
 
 
-# Greedy y Programación Dinámica
+# Greedy y Programación Dinámica (Algoritmo de Martello y Toth)
 
 # cantidad = [1000, 2000, 3000, 4000, 5000, 7500, 10000]
 
