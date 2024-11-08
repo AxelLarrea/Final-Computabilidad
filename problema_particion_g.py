@@ -15,6 +15,7 @@ def greedy(conjunto):
     
     conjunto.sort(reverse=True)
     
+    
     # Asigna cada número al grupo con la suma más baja
     for number in conjunto:
         if suma1 <= suma2:
@@ -23,13 +24,9 @@ def greedy(conjunto):
         else:
             group2.append(number)
             suma2 += number
+            
     fin = time.time()
     
-    if (abs(sum(group1) - sum(group2)) == 0):
-        print('Existen dos subconjuntos que sumen lo mismo')
-        print(f'Suma de cada subconjunto - Subconjunto A:{suma1} - Subconjunto B:{suma2}')
-        # print(f'Solución - Subconjunto A:{group1} - Subconjunto B:{group2}')
-        print(f'Tiempo de ejecución: {(fin-inicio): .10f}s')
-    else:
-        print('No existen dos subconjuntos que sumen lo mismo')
-        print(f'Tiempo de ejecución: {(fin-inicio): .10f}s')
+    
+    print(f'Suma de cada subconjunto - Subconjunto A:{suma1} - Subconjunto B:{suma2}')
+    print(f'Tiempo de ejecución: {(fin-inicio): .10f}s')
