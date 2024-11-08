@@ -8,5 +8,5 @@ def generateData(n):
         json.dump(data, file, indent=4)
 
 
-n = 7500
-generateData(n)
+# n = 7500
+# generateData(n)

@@ -1,6 +1,5 @@
 def porcentaje_error(diferencia, suma_total):
     
-    # Sumar ambas sumas para obtener el total ideal
     suma_ideal = (suma_total) / 2
     
     # Calcular el porcentaje de error

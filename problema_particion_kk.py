@@ -1,21 +1,25 @@
+
+# Problema de partición con algoritmo Karmarkar-Karp
+
 from bisect import insort
 import time
 
-def karmarkar_karp(numbers):
+def karmarkar_karp(conjunto):
 
     inicio = time.time()
 
-    # Ordenar los números en orden descendente
-    numbers.sort(reverse=True)
+    # Ordenar los números en orden ascendente
+    conjunto.sort()
     
-    while len(numbers) > 1:
-        num1 = numbers.pop()
-        num2 = numbers.pop()
+    while len(conjunto) > 1:
+        num1 = conjunto.pop()
+        num2 = conjunto.pop()
         diff = num1 - num2
-        insort(numbers, diff)
+        insort(conjunto, diff)
+        
 
     fin = time.time()
-    print(f'Diferencia mínima entre los subconjuntos: {numbers[0]}')
-    print(f'Tiempo de ejecución: {fin-inicio}s')
+    print(f'Diferencia mínima entre los subconjuntos: {conjunto[0]}')
+    print(f'Tiempo de ejecución: {(fin-inicio): .10f}s')
 
-    return numbers[0]
+    return conjunto[0]

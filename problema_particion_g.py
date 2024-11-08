@@ -3,11 +3,10 @@
 
 import time
 
-
 def greedy(conjunto):
     
-    group1 = []
-    group2 = []
+    subconjunto1 = []
+    subconjunto2 = []
     suma1 = 0
     suma2 = 0
     
@@ -19,15 +18,15 @@ def greedy(conjunto):
     # Asigna cada número al grupo con la suma más baja
     for number in conjunto:
         if suma1 <= suma2:
-            group1.append(number)
+            subconjunto1.append(number)
             suma1 += number
         else:
-            group2.append(number)
+            subconjunto2.append(number)
             suma2 += number
             
     fin = time.time()
     
-    
+    # print(f'Subconjunto A:{subconjunto1} - Subconjunto B:{subconjunto2}')
     print(f'Suma de cada subconjunto - Subconjunto A:{suma1} - Subconjunto B:{suma2}')
     print(f'Tiempo de ejecución: {(fin-inicio): .10f}s')
 
