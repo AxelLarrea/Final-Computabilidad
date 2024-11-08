@@ -1,7 +1,6 @@
 import json
 from problema_particion_fb import fuerza_bruta
 from problema_particion_g import greedy
-from otros_algoritmos.problema_particion_greedy_pd import greedy_pd
 from problema_particion_kk import karmarkar_karp
 from porcentaje_error import porcentaje_error
 from generar_datos import generateData
