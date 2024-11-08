@@ -30,3 +30,5 @@ def greedy(conjunto):
     
     print(f'Suma de cada subconjunto - Subconjunto A:{suma1} - Subconjunto B:{suma2}')
     print(f'Tiempo de ejecución: {(fin-inicio): .10f}s')
+
+    return suma1-suma2

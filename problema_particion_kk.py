@@ -5,9 +5,9 @@ def karmarkar_karp(numbers):
 
     inicio = time.time()
 
-    # Ordenar los números en orden ascendente
-    numbers.sort()
-    print(numbers)
+    # Ordenar los números en orden descendente
+    numbers.sort(reverse=True)
+    
     while len(numbers) > 1:
         num1 = numbers.pop()
         num2 = numbers.pop()
@@ -15,5 +15,7 @@ def karmarkar_karp(numbers):
         insort(numbers, diff)
 
     fin = time.time()
-    print(f'Diferencia mínima entre los subconjuntos: {numbers}')
+    print(f'Diferencia mínima entre los subconjuntos: {numbers[0]}')
     print(f'Tiempo de ejecución: {fin-inicio}s')
+
+    return numbers[0]
